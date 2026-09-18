@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Horror Book Table
+    br
+    a(href='/update-cobj') Add to this table
+    br
+    br
+    table
+      thead
+        tr
+          th Name
+          th Author
+          th Publication Year
+      tbody
+        each book in books
+          tr
+            td= book.properties.name
+            td= book.properties.author
+            td= book.properties.publication_year
